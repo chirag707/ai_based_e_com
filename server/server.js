@@ -16,7 +16,7 @@ const port =  process.env.PORT || 9000;
 
 
 //DB Config
-const connection_url  = 'YOUR Mongo DB URL Here';
+const connection_url = "mongodb://127.0.0.1:27017/ai-shopping-db";
 mongoose.connect(connection_url, {
     useNewUrlParser: true,
     useUnifiedTopology: true
