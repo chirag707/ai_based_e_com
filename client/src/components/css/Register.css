@@ -1,26 +1,186 @@
+/* ===================================
+   PROFESSIONAL REGISTER PAGE DESIGN
+   Clean, Modern, Conversion-Focused
+   =================================== */
+
+body {
+    font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== REGISTER CONTAINER ===== */
 .main {
-
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    margin-top: 10vh;
+    min-height: 100vh;
+    padding: 2rem;
+    background: #f8f9fa;
 }
 
+/* ===== REGISTER SECTION ===== */
+.main section,
+.main > div {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 3rem;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e9ecef;
+    max-width: 480px;
+    width: 100%;
+}
+
+/* ===== HEADER ===== */
 .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 32px;
-    margin-bottom: 5vh;
-    font-weight: bold;
-    text-shadow: 2px 4px 8px #aaa;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #212529;
+    text-align: center;
+    margin-bottom: 2rem;
+    letter-spacing: -0.5px;
 }
 
+/* ===== FORM CONTAINER ===== */
 .form-c {
     display: flex;
     flex-direction: column;
-    width: 30vh;
-    gap: 5vh;
-    margin-bottom: 5vh;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* ===== MATERIAL-UI OVERRIDES ===== */
+.MuiTextField-root {
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+.MuiInput-underline:before {
+    border-bottom-color: #dee2e6 !important;
+}
+
+.MuiInput-underline:hover:not(.Mui-disabled):before {
+    border-bottom-color: #495057 !important;
+}
+
+.MuiInput-underline:after {
+    border-bottom-color: #212529 !important;
+}
+
+.MuiInputLabel-root {
+    color: #6c757d !important;
+    font-weight: 500 !important;
+}
+
+.MuiInputLabel-root.Mui-focused {
+    color: #212529 !important;
+}
+
+.MuiInputBase-input {
+    color: #212529 !important;
+    font-size: 1rem !important;
+    padding: 0.5rem 0 !important;
+}
+
+/* ===== BUTTONS ===== */
+.MuiButton-root {
+    width: 100% !important;
+    margin: 0.5rem 0 !important;
+    padding: 0.875rem 1rem !important;
+    font-size: 0.9375rem !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    border-radius: 8px !important;
+}
+
+.MuiButton-contained {
+    background-color: #212529 !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 8px rgba(33, 37, 41, 0.15) !important;
+}
+
+.MuiButton-contained:hover {
+    background-color: #495057 !important;
+    box-shadow: 0 4px 12px rgba(33, 37, 41, 0.25) !important;
+}
+
+.MuiButton-colorSecondary {
+    color: #212529 !important;
+    background-color: transparent !important;
+    border: 1px solid #dee2e6 !important;
+}
+
+.MuiButton-colorSecondary:hover {
+    background-color: #f8f9fa !important;
+    border-color: #adb5bd !important;
+}
+
+/* ===== ERROR MESSAGE ===== */
+.error-message {
+    padding: 1rem;
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 8px;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .main section,
+    .main > div {
+        padding: 2rem 1.5rem;
+        margin: 1rem;
+    }
+    
+    .header {
+        font-size: 1.75rem;
+    }
+    
+    .form-c {
+        gap: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main {
+        padding: 1rem;
+    }
+    
+    .main section,
+    .main > div {
+        padding: 1.5rem 1rem;
+    }
+    
+    .header {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .form-c {
+        gap: 1rem;
+    }
+}
+
+/* ===== LOADING STATE ===== */
+.loading-spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+    display: inline-block;
+    margin-left: 0.5rem;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
 }
