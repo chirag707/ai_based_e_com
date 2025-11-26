@@ -48,3 +48,8 @@ app.use('/api/order',Orderroute);
 
 //listen
 app.listen(port,() => console.log(`Listening on localhost: ${port}`));
+
+// Add this route in your server
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'OK', timestamp: new Date().toISOString() });
+});
