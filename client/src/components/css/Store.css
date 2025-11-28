@@ -1,255 +1,50 @@
-/* ===================================
-   PROFESSIONAL E-COMMERCE DESIGN
-   Modern, Clean, Desktop-First Layout
-   =================================== */
+.welcome_msg {
+    font-size: 24px;
+    margin-top: -0.8vh;
+    margin-left: 7vh;
+    color:rgb(45, 56, 65);
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
-
-body {
-    font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: #f8f9fa;
-    color: #212529;
-    line-height: 1.6;
-}
-
-/* ===== PROFESSIONAL NAVIGATION BAR ===== */
-.navbar {
-    background: #ffffff;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 5%;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 1px solid #e9ecef;
-}
-
 .comp_name {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #2d3436;
-    letter-spacing: -0.5px;
-    margin: 0;
+
+    margin-left: 3vh;
+    font-size: 33px;
+    margin-top: 1vh;
+    color:antiquewhite
+
+}
+.navbar {
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+    background: #f953c6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #b91d73, #f953c6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #b91d73, #f953c6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 2px 4px 8px #aaa;
+
 }
 
 .navbar ul {
     display: flex;
-    list-style: none;
-    align-items: center;
-    gap: 3rem;
-    margin: 0;
+    list-style-type: none;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 15vh;
+    margin-left: 90vh;
+    margin-top: 3vh;
+    font-weight: bold;
+    transition: all 0.5s ease-in-out;
+    font-size: 20px;
+    color: rgb(19, 16, 16);
+    
+
 }
 
 .navbar ul li {
-    position: relative;
+    transition: all 0.5s ease-in-out;
+    text-decoration: underline;
 }
 
-.navbar ul li a {
-    color: #495057;
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 500;
-    transition: color 0.2s ease;
-    padding: 0.5rem 0;
-}
-
-.navbar ul li a:hover {
-    color: #212529;
-}
-
-.navbar ul li a::after {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #212529;
-    transition: width 0.3s ease;
-}
-
-.navbar ul li a:hover::after {
-    width: 100%;
-}
-
-.welcome_msg {
-    font-size: 0.95rem;
-    color: #495057;
-    font-weight: 500;
-}
-
-/* ===== MAIN CONTAINER ===== */
-.text-gray-700 {
-    background: #f8f9fa;
-    min-height: 100vh;
-}
-
-.container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 4rem 5%;
-}
-
-/* ===== HEADER SECTION ===== */
-.header {
-    font-size: 1.5rem;
-    color: #6c757d;
-    text-align: center;
-    margin-bottom: 4rem;
-    font-weight: 400;
-    padding: 1.5rem;
-    background: #ffffff;
-    border-radius: 8px;
-    border: 1px solid #dee2e6;
-}
-
-/* ===== PRODUCT GRID ===== */
-.items {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-    margin-bottom: 4rem;
-}
-
-/* ===== RESPONSIVE BREAKPOINTS ===== */
-@media (max-width: 1400px) {
-    .items {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 1024px) {
-    .items {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-    }
-    
-    .container {
-        padding: 3rem 4%;
-    }
-    
-    .navbar {
-        padding: 0 4%;
-    }
-    
-    .navbar ul {
-        gap: 2rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .navbar {
-        height: auto;
-        flex-direction: column;
-        padding: 1.5rem 4%;
-        gap: 1rem;
-    }
-    
-    .navbar ul {
-        flex-direction: column;
-        gap: 1rem;
-        width: 100%;
-        text-align: center;
-    }
-    
-    .comp_name {
-        font-size: 1.75rem;
-    }
-    
-    .items {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-    }
-    
-    .container {
-        padding: 2rem 4%;
-    }
-}
-
-@media (max-width: 480px) {
-    .items {
-        grid-template-columns: 1fr;
-    }
-    
-    .container {
-        padding: 1.5rem 4%;
-    }
-    
-    .header {
-        font-size: 1.25rem;
-        margin-bottom: 2rem;
-    }
-}
-
-/* ===== SMOOTH SCROLLING ===== */
-html {
-    scroll-behavior: smooth;
-}
-
-/* ===== SELECTION COLOR ===== */
-::selection {
-    background: #2d3436;
-    color: #ffffff;
-}
-
-::-moz-selection {
-    background: #2d3436;
-    color: #ffffff;
-}
-
-/* ===== SCROLLBAR STYLING ===== */
-::-webkit-scrollbar {
-    width: 12px;
-}
-
-::-webkit-scrollbar-track {
-    background: #f1f3f5;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #adb5bd;
-    border-radius: 6px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #868e96;
-}
-
-/* ===== UTILITY CLASSES ===== */
-.flex {
-    display: flex;
-}
-
-.flex-wrap {
-    flex-wrap: wrap;
-}
-
-.-m-4 {
-    margin: -1rem;
-}
-
-.body-font {
-    font-family: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
-}
-
-.px-5 {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-}
-
-.py-24 {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-}
-
-.mx-auto {
-    margin-left: auto;
-    margin-right: auto;
+.navbar ul li:hover {
+    color:rgb(235, 249, 255);
 }

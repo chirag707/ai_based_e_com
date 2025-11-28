@@ -1,61 +1,25 @@
-/* ===================================
-   PROFESSIONAL FOOTER DESIGN
-   Clean, Modern, Minimal
-   =================================== */
-
 .footer {
-    background: #ffffff;
-    border-top: 1px solid #e9ecef;
-    padding: 3rem 5%;
-    margin-top: 4rem;
+
+    display: flex;
+    flex-direction: row;
+    width: '100 %';
+    justify-content: center;
+
+
 }
 
-.footer h1 {
+h1 {
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 0.5rem;
-    margin: 0;
-    font-size: 1rem;
-    font-weight: 500;
-    color: #6c757d;
-    text-align: center;
+    gap: 12px;
+    margin-bottom: 8vh;
+    margin-left: 5vh;
+    margin-top: 5vh;
+
 }
 
 .heart {
-    width: 1.25rem;
-    height: 1.25rem;
-    filter: grayscale(0);
-    transition: transform 0.3s ease;
-}
-
-.heart:hover {
-    transform: scale(1.2);
-}
-
-/* ===== RESPONSIVE DESIGN ===== */
-@media (max-width: 768px) {
-    .footer {
-        padding: 2rem 4%;
-    }
-    
-    .footer h1 {
-        font-size: 0.9375rem;
-        flex-wrap: wrap;
-    }
-    
-    .heart {
-        width: 1.125rem;
-        height: 1.125rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .footer {
-        padding: 1.5rem 4%;
-    }
-    
-    .footer h1 {
-        font-size: 0.875rem;
-    }
+    height: 4vh;
+    width: 4vh;
+    margin-top: -0.5vh;
 }
